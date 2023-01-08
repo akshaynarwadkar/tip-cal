@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    color: white;
+}
+
+body{
+    background: #8990ec;
+}
+
+.wrapper{
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+    background: #272639;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 4px rgba(1,1,1,0.5);
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding: 50px;
+    color: white;
+}
+
+.inputcontainer{
+    background: #353959;
+    margin-top: 5px;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    color: white;
+}
+
+.dollarSign{
+    margin-left: 10px;
+}
+
+#billTotalInput,#tipTotalInput{
+    font-size: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    padding: none;
+    color: white;
+}
+
+p{
+    font-weight: bold;
+}
+
+.countPeople{
+    display: flex;
+    flex-direction: column;
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+
+}
+
+.buttonContainer{
+    background: #8990ec;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+
+}
+
+#removePerson,#addPerson{
+    font-size: 15px;
+    background: none;
+    border: none;
+}
+
+.splitAmount {
+    font-size: 1.3rem;
+    margin: 0.4rem;
+  }
+
+.bottom-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalAmount{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.total {
+    font-size: 1.5rem;
+}
+
+.calculate{
+    display: grid;
+    place-items: center;
+}
+
+#calBtn{
+    margin: 2px auto;
+    padding: 7px;
+    background: #8990ec;
+}
+
+.calculate button:hover{
+    cursor: pointer;
+}
+  

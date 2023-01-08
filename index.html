@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip cal</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flex" >
+            <div class="section">
+                <div><h3>Bill total</h3></div>
+                <div class="inputcontainer">
+                    <span class="dollarSign">   $</span>
+                    <input id="billTotalInput" type="text" placeholder="0.00">
+                </div>
+            </div>
+            <div class="section">
+                <div><h3>Tip</h3></div>
+                <div class="inputcontainer">
+                    <span class="dollarSign">   %</span>
+                    <input id="tipTotalInput" type="text" placeholder="10">
+                </div>
+            </div>
+            <div class="bottom-section">
+                <div class="countPeople">
+                    <h3>People</h3>
+                    <div class="counter">
+                        <span id="removeP" class="buttonContainer">
+                            <button id="removePerson" type="button">
+                                <span class="buttonText">-</span>    
+                            </button>
+                        </span>
+                        <span class="splitAmount" id="numberOfPeople">2</span>
+                        <span id="addP" class="buttonContainer">
+                            <button id="addPerson" type="button">
+                                <span class="buttonText">+</span>    
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="totalAmount">
+                    <h3>Total per person</h3>
+                    <div class="total" id="perPersonTotal">$0.00</div>
+                </div>
+            </div>
+
+            <div class="calculate">
+                <button id="calBtn" type="button">Calculate</button>
+            </div>
+
+        </div>
+
+        
+        
+    </div>
+    <script src="/index.js"></script>
+    
+</body>
+</html>
