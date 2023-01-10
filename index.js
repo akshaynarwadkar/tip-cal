@@ -14,28 +14,57 @@ var tipStore;
 var tipValue;
 var totalBillValue;
 var perPersonShare
-var add=Number(numberOfPeopleEl.innerText);
+var noOfPers=Number(numberOfPeopleEl.innerText);
 
-calBtnEl.onclick=()=>{
-    billStore=Number(billTotalInputEl.value)
-    tipStore=Number(tipTotalInputEl.value)
-    tipValue=billStore*(tipStore/100)
-    totalBillValue=billStore+tipValue
 
-    perPersonShare=(totalBillValue/add).toFixed(2)
+// calBtnEl.onclick=()=>{
+//     billStore=Number(billTotalInputEl.value)
+//     tipStore=Number(tipTotalInputEl.value)
+//     tipValue=billStore*(tipStore/100)
+//     totalBillValue=billStore+tipValue
 
-  perPersonTotalEl.innerText=` $ ${perPersonShare} `
+//     perPersonShare=(totalBillValue/noOfPers).toFixed(2)
+
+//   perPersonTotalEl.innerText=` $ ${perPersonShare} `
+// }
+
+
+// removePEl.onclick=()=>{
+//     if(numberOfPeopleEl.innerText!=1){
+//         numberOfPeopleEl.innerText-=1
+//         noOfPers-=1
+//     }
+    
+// }
+
+// addPEl.onclick=()=>{
+//     noOfPers= Number(numberOfPeopleEl.innerText)
+//     noOfPers+=1
+//     numberOfPeopleEl.innerText=noOfPers
+
+// }
+
+
+function calculate(){
+    billStore = Number(billTotalInputEl.value)
+    tipStore = Number(tipTotalInputEl.value)
+    
+    tipValue= billStore*(tipStore/100)
+    totalBillValue =  billStore+tipValue
+    perPersonShare=  totalBillValue/noOfPers
+    perPersonTotalEl.innerText=`$ ${perPersonShare.toFixed(2)}`  
 }
 
-
 removePEl.onclick=()=>{
-    if(numberOfPeopleEl.innerText!=1){
+    if(noOfPers!=1){
         numberOfPeopleEl.innerText-=1
+        noOfPers-=1
     }
+    calculate()
 }
 
 addPEl.onclick=()=>{
-    // add= Number(numberOfPeopleEl.innerText)
-    add+=1
-    numberOfPeopleEl.innerText=add
+    noOfPers+=1
+    numberOfPeopleEl.innerText=noOfPers
+    calculate()
 }

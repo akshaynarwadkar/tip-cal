@@ -14,14 +14,14 @@
                 <div><h3>Bill total</h3></div>
                 <div class="inputcontainer">
                     <span class="dollarSign">   $</span>
-                    <input id="billTotalInput" type="text" placeholder="0.00">
+                    <input id="billTotalInput" type="text" onkeyup="calculate()" placeholder="0.00">
                 </div>
             </div>
             <div class="section">
                 <div><h3>Tip</h3></div>
                 <div class="inputcontainer">
                     <span class="dollarSign">   %</span>
-                    <input id="tipTotalInput" type="text" placeholder="10">
+                    <input id="tipTotalInput" onkeyup="calculate()" type="text" placeholder="10">
                 </div>
             </div>
             <div class="bottom-section">
@@ -29,13 +29,13 @@
                     <h3>People</h3>
                     <div class="counter">
                         <span id="removeP" class="buttonContainer">
-                            <button id="removePerson" type="button">
+                            <button id="removePerson"  onkeyup="calculate()" type="button">
                                 <span class="buttonText">-</span>    
                             </button>
                         </span>
-                        <span class="splitAmount" id="numberOfPeople">2</span>
-                        <span id="addP" class="buttonContainer">
-                            <button id="addPerson" type="button">
+                        <span class="splitAmount" id="numberOfPeople">1</span>
+                        <span id="addP"  class="buttonContainer">
+                            <button id="addPerson" onkeyup="calculate()"  type="button">
                                 <span class="buttonText">+</span>    
                             </button>
                         </span>
